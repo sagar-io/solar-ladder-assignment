@@ -1,0 +1,67 @@
+@use "../abstracts/" as *;
+
+.books-wrapper {
+  padding: 0.7rem 0.4rem 0 0.4rem;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.705);
+
+  .icon {
+    transform: scale(1.1);
+    display: inline-block;
+  }
+  .item {
+    @include flex();
+    gap: 5px;
+    color: black;
+    padding: 1rem;
+  }
+  .item:hover {
+    opacity: 0.6;
+  }
+  .item.active {
+    color: royalblue;
+    border-bottom: 3px solid currentColor;
+  }
+}
+
+.books-navbar {
+  padding-top: 1rem;
+  @include flex();
+  justify-content: space-around;
+}
+
+.filter-wrapper {
+  @include flex();
+  justify-content: flex-end;
+  padding: 1rem;
+  gap: 1.5rem;
+  border-bottom: 1px solid $border-light-clr;
+
+  p {
+    font-size: 0.9rem;
+    color: $blue-clr;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 0.3rem 0.7rem;
+
+    &:hover {
+      color: black;
+    }
+  }
+
+  .filter-active {
+    border: 1px solid royalblue;
+    border-radius: 5px;
+    @include flex();
+
+    &::after {
+      content: "✕";
+      font-size: 1.16rem;
+      padding-left: 4px;
+    }
+  }
+
+  .icon {
+    display: inline-block;
+    transform: scale(1.2);
+  }
+}

@@ -1,0 +1,55 @@
+@use '../abstracts/' as *;
+
+.classic-btn {
+    background-color: $blue-clr;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0 0 8px -4px gray;
+    @include flex();
+    gap: 5px;
+    cursor: pointer;
+    transition: 0.4s;
+    border: 1px solid transparent;
+    &:hover {
+        background-color: white;
+        color: $blue-clr;
+        border: 1px solid $blue-clr;
+    }
+}
+.del-btn {
+    border: 1px solid gray;
+    box-shadow: none;
+    background-color: white;
+    color: gray;
+    cursor: pointer;
+}
+
+.disabled-btn {
+    cursor: not-allowed;
+}
+
+.deselect-img-btn, .rst-btn {
+    // position: absolute;
+    // z-index: 20;
+    // right: 0;
+    // top: -10%;
+    padding: 0.4rem 0.8rem;
+    margin-left: 1rem;
+    border-radius: 8px;
+    border: none;
+    background-color: gray;
+    cursor: pointer;
+    font-size: 0.8rem;
+    color: gray;
+    background-color: white;
+    transition: 0.3s;
+
+    &:hover {
+      color: red;
+      background-color: black;
+    }
+}
+
+

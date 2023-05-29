@@ -1,0 +1,30 @@
+@use '../abstracts/' as *;
+
+.bar {
+    background-color: rgba(128, 128, 128, 0.858);
+    width: 33px;
+    height: 12px;
+    border-radius: 8px;
+    @include flex();
+    justify-content: start;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+
+    .circle {
+        width: 18px;
+        aspect-ratio: 1/1;
+        background-color: white;
+        border-radius: 50%;
+        box-shadow: 0 0 8px -2px gray;
+        transition: 0.4s ease-out;
+    }
+}
+
+.bar-on {
+    justify-content: end;
+    background-color: rgba(163, 163, 237, 0.849);
+
+    .circle {
+        background: blue;
+    }
+}

@@ -1,0 +1,22 @@
+@use "../abstracts/" as *;
+
+header {
+  padding: 1rem 0;
+  @include flex();
+  justify-content: space-around;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.705);
+
+  .logo {
+    max-width: 200px;
+    cursor: pointer;
+  }
+  .icon {
+    transform: scale(1.2);
+  }
+  a {
+    color: black;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+}

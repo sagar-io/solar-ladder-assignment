@@ -1,0 +1,12 @@
+@use '../abstracts/' as *;
+
+.not-available-component {
+    background-color: skyblue;
+    padding: 4rem;
+    @include flex(column);
+
+    p {
+        font-family: monospace;
+        font-size: 1.2rem;
+    }
+}
